@@ -26,8 +26,10 @@ import java.sql.DriverManager;
 public class DBHelper {
 	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 
-	private static final String DATABASE_URL = "jdbc:mysql:loadbalance://172.16.66.131:3306,172.16.66.132:3306/testcls?roundRobinLoadBalance=true&useUnicode=true&characterEncoding=UTF-8";
+//	private static final String DATABASE_URL = "jdbc:mysql:loadbalance://172.16.66.131:3306,172.16.66.132:3306/testcls?roundRobinLoadBalance=true&useUnicode=true&characterEncoding=UTF-8";
 
+	private static final String DATABASE_URL = "jdbc:mysql://172.16.66.100:3305/testcls?&useUnicode=true&characterEncoding=UTF-8&useSSL=false";
+	
 	private static final String USER_NAME = "root";
 
 	private static final String USER_PASSWORD = "root";

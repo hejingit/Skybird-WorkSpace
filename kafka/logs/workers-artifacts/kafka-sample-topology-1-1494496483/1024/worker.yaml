@@ -1,0 +1,4 @@
+worker-id: a7702d10-a74d-4b1d-ac3c-89ba3c813ecf
+logs.users: []
+logs.groups: []
+topology.submitter.user: sks
