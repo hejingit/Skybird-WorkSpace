@@ -14,8 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 
  */
 @SpringBootApplication
-//@ComponentScan(basePackages={"org.skybird.example.springboot","org.skybird.example.springboot.service"})  
-//@ComponentScan(basePackages={"org.skybird.example.springboot"}) 
 public class App 
 {
     public static void main( String[] args )

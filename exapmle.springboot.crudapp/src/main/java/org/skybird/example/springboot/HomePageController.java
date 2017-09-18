@@ -26,9 +26,6 @@ import org.springframework.web.servlet.ModelAndView;
  * @version 
  * @since 
  */
-@Configuration
-@ServletComponentScan
-@EnableAutoConfiguration 
 @Controller
 @ComponentScan(basePackages={"org.skybird.example.springboot"}) 
 public class HomePageController {
