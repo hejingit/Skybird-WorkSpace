@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<script
+    src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.txtChange = function() {
+
+        }
+    });
+</script>
+</head>
+<body>
+    <p th:text="${hello}"></p>
+    <!-- SEARCH TABLE -->
+    <form action="http://localhost:8080/home" method="post">
+        <p>
+            Search Condition: <input type="text" name="message"/>&nbsp;&nbsp;<input type="submit" value="Search" />
+        </p>
+    </form>
+
+    <br />
+    <table border="1" width="400">
+        <tr>
+            <th colspan="3" align="center">Messages</th>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Message</td>
+            <td>Opt</td>
+        </tr>
+        <tr th:each="m,index: ${pos}">
+            <td th:text="${index.index}+1"></td>
+            <td th:text="${m.message}"></td>
+            <td><a th:href="'/delete/' + ${m.id }">delete</a></td>
+        </tr>
+    </table>
+    <br />
+
+
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <form action="http://localhost:8080/save" method="post">
+                <p>
+                    Message: <input type="text" name="message" ng-model="message"
+                        ng-blur="txtChange();" />&nbsp;&nbsp;<input type="submit"
+                        value="Save" />
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

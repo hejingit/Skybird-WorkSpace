@@ -2,8 +2,15 @@ package org.jinhe.example.dubbo.consumer;
 
 import java.io.IOException;
 
+import javax.annotation.Resource;
+
 import org.jinhe.example.dubbo.provider.DemoService;
+import org.jinhe.example.dubbo.provider.UnregistryUtil;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.alibaba.dubbo.common.URL;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.dubbo.registry.RegistryService;
 
 /**
  * 
@@ -24,11 +31,18 @@ public class StartConsumerMain
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				new String[] { "applicationContext.xml" });
 		context.start();
-
+		
 		DemoService demoService = (DemoService) context.getBean("demoService");
 		String hello = demoService.sayHello("====s===tom====s===");
 		System.out.println(hello);
-
-		System.in.read();
+		
+		String provider = "dubbo://10.66.65.165:20880/org.jinhe.example.dubbo.provider.DemoService?anyhost=true&application=demo_provider&dubbo=2.8.4&generic=false&interface=org.jinhe.example.dubbo.provider.DemoService&methods=sayHello,getUsers&pid=7263&side=provider×tamp=1501652249601";
+		URL providerUrl = URL.valueOf(provider);
+		
+		RegistryService registryService = (RegistryService) context.getBean("registry");
+		registryService.unregister(providerUrl);
+		
+		
+		//System.in.read();
     }
 }

@@ -15,6 +15,7 @@
 	 interface="org.jinhe.example.dubbo.provider.DemoService" 
 	url="dubbo://127.0.0.1:20880" 
 	check="false"  timeout="42000"/>
-
+   <!-- 引入dubbo 原始服务 -->
+    <dubbo:reference id="registry" interface="com.alibaba.dubbo.registry.RegistryService" />
 	
 </beans>
