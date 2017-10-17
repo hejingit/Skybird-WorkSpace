@@ -146,11 +146,11 @@
 			<version>2.2.3</version>
 		</dependency>
 		
-	<!-- hot update  -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
+		<!-- hot update  -->
+	    <dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-devtools</artifactId>
+	    </dependency>
  
 
 	</dependencies>
