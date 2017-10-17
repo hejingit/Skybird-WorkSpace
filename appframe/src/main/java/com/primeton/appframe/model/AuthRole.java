@@ -1,3 +1,12 @@
+/**
+ * Project Name:appframe
+ * File Name:AuthRole.java
+ * Package Name:com.primeton.appframe.model
+ * Date:2017年10月17日下午3:30:58
+ * Copyright (c) 2017, Jin.He (mailto:hejin@primeton.com) All Rights Reserved.
+ *
+*/
+
 package com.primeton.appframe.model;
 
 import java.util.ArrayList;
@@ -8,6 +17,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+/**
+ * ClassName:AuthRole <br/>
+ * Function: TODO ADD FUNCTION. <br/>
+ * Reason:	 TODO ADD REASON. <br/>
+ * Date:     2017年10月17日 下午3:30:58 <br/>
+ * @author   Jin.He (mailto:hejin@primeton.com)
+ * @version  
+ * @see 	 
+ */
 
 @Table(name = "auth_role")
 public class AuthRole {
@@ -95,5 +113,5 @@ public class AuthRole {
 	public void setOperations(List<AuthOperation> operations) {
 		this.operations = operations;
 	}
-
 }
+
