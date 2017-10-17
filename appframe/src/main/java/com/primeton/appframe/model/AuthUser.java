@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
 /**
  * ClassName:AuthUser <br/>
  * Function: TODO ADD FUNCTION. <br/>
