@@ -38,7 +38,7 @@ public class MultipleDataSourceAspectAdvice {
 	 * @return 使用的数据源
 	 * @throws Throwable   
 	 */
-	@Around("execution(* com.coffee.modules.sys.dao.*.*(..))|")
+	@Around("execution(* com.coffee.modules.*.dao.*.*(..))")
 	public Object invoke(ProceedingJoinPoint joinPoint) throws Throwable {
 		System.out.println("============================================");
 		Object object = joinPoint.getTarget();
